@@ -1,0 +1,27 @@
+[package]
+name = "keystone-engine"
+version = "0.1.0"
+author = ["lyte <maxime.peterlin@impalabs.fr>"]
+edition = "2021"
+description = "Rust bindings for the Keystone Engine assembler library."
+documentation = "https://docs.rs/keystone-engine"
+readme = "README.md"
+repository = "https://github.com/impalabs/keystone-bindings"
+license = "GPL-2.0"
+build = "build.rs"
+links = "keystone"
+keywords = ["assembler", "assembly", "bindings"]
+categories = ["encoding", "api-bindings", "compilers"]
+
+[dependencies]
+bitflags = "1.0"
+libc = "0.2"
+
+[build-dependencies]
+cmake = { optional = true, version = "0.1" }
+pkg-config = { optional = true, version = "0.3" }
+
+[features]
+default = ["build-from-src"]
+use-system-lib = ["pkg-config"]
+build-from-src = ["cmake"]
