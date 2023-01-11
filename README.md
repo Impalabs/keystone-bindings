@@ -32,7 +32,7 @@ This example, taken from the [official repo](https://github.com/keystone-engine/
 Add the following dependency to `Cargo.toml`:
 
 ```toml
-keystone_engine = { version = "0.1.0", features = ["build-from-src"] }
+keystone-engine = { version = "0.1.0", features = ["build-from-src"] }
 ```
 
 **Note:** You can use either `build-from-src` to build the Keystone Engine or `use-system-lib` if you have already installed the Keystone library on your system.
